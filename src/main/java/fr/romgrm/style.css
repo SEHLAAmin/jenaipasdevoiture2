@@ -1,0 +1,865 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{ 
+  color: white;
+  /* desactiver le scroll dans le body (pas oublier
+  de lui donner une taille sinon ça marche pas*/
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.container{
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    /*SCROLL SMOOTH*/
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+/*HIDE SCROLL BAR*/
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#rs{
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+#fb{
+    position: absolute;
+    height: 28px;
+}
+#fb:hover{
+    zoom: 1.08;
+}
+
+#insta{
+    position: absolute;
+    height: 22px;
+    left: 40px;
+    top: 3px;
+}
+#insta:hover{
+    zoom: 1.06;
+}
+
+#twitter{
+    position: absolute;
+    height: 25px;
+    left: 75px;
+    top: 1px;
+}
+#twitter:hover{
+    zoom: 1.05;
+}
+
+/*///////////////////////////////////////////////////   NAVBAR  /////////////////////////////////////////////////////////////////////////////////////*/
+
+.navbar{
+    background-color: rgba(255, 255, 255, 0.1); 
+    position: fixed;
+    top: 0; 
+    z-index: 10; 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900 bold ;    
+}
+
+#categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#categories li{
+    padding: 0 20px;
+}
+
+#categories li{
+    align-items: center; 
+    justify-content: center;
+    list-style-type: none;
+}
+
+
+#categories li a{
+    color: white;
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+#categories li a:hover{
+     zoom: 1.2; 
+     color: #fdad17;
+     
+}
+
+/*//////////////////////////////////////////////////////////// ALL SECTIONS /////////////////////////////////////////////////////////*/
+
+Section{
+    display: block;
+    flex-direction: column;
+    width: 100%; 
+    height: 100vh; /* vh = Viewport Height : permet de dimensioner par rapport à la taille de l'écran*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /*SCROLL SNAP ALIGN*/
+    scroll-snap-align: center; 
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#LOCALISATION{
+    margin: 0;
+    padding: 0;    
+}
+
+#LOCALISATION h2{
+    position: relative;
+    top: 250px; 
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800 bold ;
+    z-index: 9;
+}
+
+#LOCALISATION ul{
+    position: relative;
+    top: 350px; 
+    display: flex; 
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+#LOCALISATION ul li{
+    margin: 20px 80px 20px 80px; 
+    list-style-type: none;
+    z-index: 9;
+}
+
+#LOCALISATION ul li a{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: black;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+.agence{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    width: 100px; 
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.agence:hover {
+    background-color: #fdad17;; 
+    cursor: pointer;
+}
+
+#LOCALISATION li:hover a{
+    color:white; 
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#SELECTCAR {
+    background-color: black;
+    z-index: 1000;
+}
+
+#SELECTCAR h1 {
+    position: relative; 
+    top: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    z-index: 9;   
+}
+
+#SELECTCAR span {
+    position: relative;
+    top: 80px;
+    background-color: #fdad17;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    border-radius: 20px; 
+    padding : 5px 30px;
+    font-size: 20px;
+}
+/*//////////////////////////////////////////    GRID  //////////////////////////////////////////////////////////////////////////////////////////////*/
+.grid{
+    display: grid; 
+    /*height: 700px;*/
+    width: 1000px;
+    position: relative;
+    top: 100px;
+    margin: auto;
+    grid-template: repeat(3, 1fr)  / repeat(2, 2fr);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px; 
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/*//////////////////////////////////////////    VEHICULE 1   //////////////////////////////////////////////////////////////////////////////////////////////*/
+.vehicule1{ 
+     transition: transform .5s ease;
+     border-radius: 10px;
+     height: 180px; 
+}
+.vehicule1:hover{   
+    background-color: #fdad17;
+    box-shadow: 0px 0px 15px #303952;
+    transform: scale(1.02);
+}
+.vehicule1 h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300 light;
+    font-size: 15px;
+}
+.vehicule1 .img1{
+    height: 80px;
+    padding-bottom: 5px;
+}
+.vehicule1 ul{
+    position: relative;
+    bottom: 20px;
+    font-size: 12px;
+}
+.vehicule1 ul .person{
+    height: 15px; 
+    position: relative;
+    right: 15px;
+    top: 7px;
+}
+.vehicule1 ul .porte{
+    height: 15px; 
+    position: relative;
+    right: 35px;
+    top: 35px;
+}
+
+.vehicule1 ul .boite{
+    height: 15px; 
+    position: relative;
+    right: 60px;
+    top: 62px;
+}
+
+.vehicule1 ul{
+    list-style: none;
+    
+}
+
+.vehicule1 li{
+    font-family: 'Thasadith', sans-serif;
+    position: relative;
+    bottom: 10px;
+    padding-bottom: 10px;
+}
+/*//////////////////////////////////////////    VEHICULE 2  //////////////////////////////////////////////////////////////////////////////////////////////*/
+.vehicule2{ 
+    transition: transform .5s ease;
+    border-radius: 10px; 
+    height: 180px; 
+}
+.vehicule2:hover{   
+   background-color: #fdad17;
+   box-shadow: 0px 0px 15px #303952;
+   transform: scale(1.02);
+}
+.vehicule2 h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300 light;
+    font-size: 15px; 
+}
+.vehicule2 .img2{
+    height: 80px;
+    padding-bottom: 17px;
+}
+
+.vehicule2 ul{
+    position: relative;
+    bottom: 30px;
+    font-size: 12px;
+}
+
+.vehicule2 ul .person{
+    height: 15px; 
+    position: relative;
+    right: 15px;
+    top: 7px;
+}
+.vehicule2 ul .porte{
+    height: 15px; 
+    position: relative;
+    right: 35px;
+    top: 35px;
+}
+
+.vehicule2 ul .boite{
+    height: 15px; 
+    position: relative;
+    right: 60px;
+    top: 60px;
+}
+
+.vehicule2 ul{
+    list-style: none;
+    
+}
+
+.vehicule2 li{
+    font-family: 'Thasadith', sans-serif;
+    position: relative;
+    bottom: 10px;
+    padding-bottom: 10px;
+}
+/*//////////////////////////////////////////    VEHICULE 3  //////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.vehicule3{ 
+    transition: transform .5s ease;
+    border-radius: 10px; 
+    height: 180px; 
+}
+.vehicule3:hover{   
+   background-color: #fdad17;
+   box-shadow: 0px 0px 15px #303952;
+   transform: scale(1.02);
+}
+.vehicule3 h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300 light;
+    font-size: 15px;
+}
+.vehicule3 .img3{
+    height: 80px;
+    padding-bottom: 15px;
+}
+.vehicule3 ul{
+    position: relative;
+    bottom: 30px;
+    font-size:12px;
+}
+.vehicule3 ul .person{
+    height: 15px; 
+    position: relative;
+    right: 15px;
+    top: 7px;
+}
+.vehicule3 ul .porte{
+    height: 15px; 
+    position: relative;
+    right: 35px;
+    top: 35px;
+}
+
+.vehicule3 ul .boite{
+    height: 15px; 
+    position: relative;
+    right: 60px;
+    top: 62px;
+}
+
+.vehicule3 ul{
+    list-style: none;
+}
+
+.vehicule3 li{
+    font-family: 'Thasadith', sans-serif;
+    position: relative;
+    bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/*//////////////////////////////////////////    VEHICULE 4  //////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.vehicule4{ 
+    transition: transform .5s ease;
+    border-radius: 10px; 
+    height: 180px; 
+}
+.vehicule4:hover{   
+   background-color: #fdad17;
+   box-shadow: 0px 0px 15px #303952;
+   transform: scale(1.02);
+}
+.vehicule4 h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300 light;
+    font-size: 15px;
+}
+.vehicule4 .img4{
+    height: 80px;
+    padding-bottom: 15px;
+}
+.vehicule4 ul{
+    position: relative;
+    bottom: 30px;
+    font-size: 12px;
+}
+.vehicule4 ul .person{
+    height: 15px; 
+    position: relative;
+    right: 15px;
+    top: 7px;
+}
+.vehicule4 ul .porte{
+    height: 15px; 
+    position: relative;
+    right: 35px;
+    top: 35px;
+}
+
+.vehicule4 ul .boite{
+    height: 15px; 
+    position: relative;
+    right: 50px;
+    top: 60px;
+}
+
+.vehicule4 ul{
+    list-style: none;
+    
+}
+
+.vehicule4 li{
+    font-family: 'Thasadith', sans-serif;
+    position: relative;
+    bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/*//////////////////////////////////////////    VEHICULE 5  //////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.vehicule5{ 
+    transition: transform .5s ease;
+    border-radius: 10px; 
+    height: 180px; 
+}
+.vehicule5:hover{   
+   background-color: #fdad17;
+   box-shadow: 0px 0px 15px #303952;
+   transform: scale(1.02);
+}
+.vehicule5 h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300 light;
+    font-size: 15px;
+}
+.vehicule5 .img5{
+    height: 80px;
+    padding-bottom: 15px;
+}
+.vehicule5 ul{
+    position: relative;
+    bottom: 30px;
+    font-size: 12px;
+}
+.vehicule5 ul .person{
+    height: 15px; 
+    position: relative;
+    right: 15px;
+    top: 7px;
+}
+.vehicule5 ul .porte{
+    height: 15px; 
+    position: relative;
+    right: 35px;
+    top: 35px;
+}
+
+.vehicule5 ul .boite{
+    height: 15px; 
+    position: relative;
+    right: 60px;
+    top: 62px;
+}
+
+.vehicule5 ul{
+    list-style: none;
+    
+}
+
+.vehicule5 li{
+    font-family: 'Thasadith', sans-serif;
+    position: relative;
+    bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/*//////////////////////////////////////////    VEHICULE 6  //////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.vehicule6{ 
+    transition: transform .5s ease;
+    border-radius: 10px; 
+    height: 180px; 
+}
+.vehicule6:hover{   
+   background-color: #fdad17;
+   box-shadow: 0px 0px 15px #303952;
+   transform: scale(1.02);
+}
+.vehicule6 h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300 light;
+    font-size: 15px;
+}
+.vehicule6 .img6{
+    height: 80px;
+    padding-bottom: 15px;
+}
+.vehicule6 ul{
+    position: relative;
+    bottom: 30px;
+    font-size: 12px; 
+}
+.vehicule6 ul .person{
+    height: 15px; 
+    position: relative;
+    right: 15px;
+    top: 7px;
+}
+.vehicule6 ul .porte{
+    height: 15px; 
+    position: relative;
+    right: 35px;
+    top: 35px;
+}
+
+.vehicule6 ul .boite{
+    height: 15px; 
+    position: relative;
+    right: 60px;
+    top: 60px;
+}
+
+.vehicule6 ul{
+    list-style: none;
+    
+}
+
+.vehicule6 li{
+    font-family: 'Thasadith', sans-serif;
+    position: relative;
+    bottom: 10px;
+    padding-bottom: 10px;
+
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#SELECTCAR{
+    background-color: black;
+    z-index: 9;
+}
+#SELECTCAR p{
+    z-index: 9;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#RECAPITULATE{
+    background-color: black;
+    z-index: 1000;
+}
+
+#RECAPITULATE h1{
+    position: relative; 
+    top: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    z-index: 9;   
+
+}
+
+#RECAPITULATE span{
+    position: relative;
+    top: 80px;
+    background-color: #fdad17;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    border-radius: 20px; 
+    padding : 5px 30px;
+    font-size: 20px;
+}
+#RECAPITULATE div{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    height: 500px;
+    width: 1000px;
+    position: relative;
+    margin: auto; 
+    top: 100px;
+    }
+
+#RECAPITULATE h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600 light;
+    font-size: 25px;
+}
+
+#RECAPITULATE ul{
+    position: relative;
+    bottom: 20px;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 20px;
+    list-style: none;
+}
+#RECAPITULATE ul li{
+   margin-bottom: 10px; 
+}
+#RECAPITULATE ul .person{
+    height: 30px; 
+    position: relative;
+    right: 35px;
+    top: 32px;
+}
+#RECAPITULATE ul .porte{
+    height: 30px; 
+    position: relative;
+    right: 70px;
+    top: 70px;
+}
+
+#RECAPITULATE ul .boite{
+    height: 30px; 
+    position: relative;
+    right: 105px;
+    top: 105px;
+}
+
+#RECAPITULATE div button {
+    border-radius: 30px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding : 5px 30px;
+    background-color: #fdad17;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+footer{
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900 bold ;    
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+footer a {
+    margin: 0 10px; 
+
+}
+
+#bmw{
+    position: fixed;
+    right: 0px;
+    z-index: 0;
+    width: 500px;
+    height: 800px; 
+}
+
+/*////////////////////////////////////////////////////////////// IPAD /////////////////////////////////////////////////////////////////*/
+@media all and (max-width: 1025px){
+    #SELECTCAR{
+       display: block;
+    } 
+    
+    #SELECTCAR .grid{
+        top: 120px; 
+        margin: auto ;
+        height: 600px;
+        width: 600px;
+        margin-bottom: 10px;
+    }
+
+    #RECAPITULATE div{
+       max-width: 650px;  
+    }
+
+    footer{
+        position: absolute;
+    }   
+}
+
+/*////////////////////////////////////////////////////////////// SMARTPHONE CLASSIC /////////////////////////////////////////////////////////////////*/
+@media all and (max-width: 700px){
+
+/*HOME */ 
+   
+    #LOCALISATION h2{
+        position: relative;
+        top:200px;  
+        margin-bottom: 1px; 
+        font-size: 20px;
+    }
+
+    #LOCALISATION ul {
+        display: block;
+        top: 300px;
+       }
+    
+    #LOCALISATION ul li{
+        margin: 20px auto 20px auto;
+    }
+    
+    #bmw{
+        position: fixed;
+        right: 0px;
+        z-index: 0;
+        width: 300px;
+        height: 500px;   
+    }
+
+    .navbar{
+        font-size: 10px;
+    }
+
+    #rs{
+        display: none;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+
+    /*VEHICULES*/
+
+    #SELECTCAR{
+        display: block;
+    }
+    
+    #SELECTCAR h1 { 
+           
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        z-index: 9;    
+    }
+
+    #SELECTCAR span {
+        font-weight: 200;
+        padding : 5px 15px;
+        margin: 10px 15px;
+        font-size: 12px; 
+    }
+
+    .grid{
+        display: grid; 
+        height: 600px;
+        min-height: 300px;
+        margin: auto; 
+        position: relative;
+        top: 100px;
+        grid-gap: 10px;
+        grid-template: repeat(3, 1fr)  / repeat(2, 1fr);
+        grid-template-rows: 200px 200px 200px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 30px; 
+        overflow: scroll;
+    }
+
+    .grid h3{
+        font-size: 10px;
+    }
+    .grid img{
+        height: 50px;
+        padding-bottom: 0;
+    }
+
+    .grid ul{
+        padding-top: 30px;
+    }
+    .grid li{
+        font-size: 10px;
+    }
+    
+    .grid ul .person{ 
+        height: 20px;
+        position: relative;
+        right: 30px;
+        top: 10px;
+
+    }
+    .grid ul .porte{ 
+        height: 15px;
+        position: relative;
+        top: 30px;
+        right: 50px;
+    }
+    .grid ul .boite{ 
+        height: 15px;
+        position: relative; 
+        right: 70px;
+        top: 55px;
+    }
+
+    #RECAPITULATE{
+        display: block;
+    }
+
+    #RECAPITULATE div{
+    
+        max-width: 400px; 
+    }
+    #RECAPITULATE h1{
+        font-size: 20px;
+    }
+    
+    #RECAPITULATE span{
+        font-size: 12px;
+    }
+
+    #RECAPITULATE h3{
+        font-size: 25px;
+    }
+    
+    
+}
+/*////////////////////////////////////////////////////////////// SMARTPHONE PETIT ECRAN /////////////////////////////////////////////////////////////////*/
+   @media all and (max-width: 645px){
+   
+    .grid{
+        position: relative;
+        margin: auto; 
+        grid-template: repeat(3, 1fr)  / repeat(1, 1fr);
+        max-width: 400px;
+        
+    }
+   }
+   /* finish*/
+
+
+
+
+
+
+
